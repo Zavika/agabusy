@@ -70,7 +70,9 @@ button.primary{background:linear-gradient(120deg,var(--sun-a),var(--sun-b));bord
 .shift.other{background:var(--other-soft);border-color:var(--other)}
 .shift.now{box-shadow:0 0 0 2px var(--accent)}
 .time{font-family:var(--f-mono);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
-.what{font-weight:700}
+.what{font-weight:700;order:-1;flex-basis:100%}
+.shift{row-gap:2px}
+.nw{white-space:nowrap}
 .note{color:var(--muted);font-size:.85rem;flex-basis:100%}
 .orig{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);flex-basis:100%}
 .ed{margin-left:auto;display:flex;gap:4px}
@@ -111,7 +113,7 @@ var I18N = {
   shown:'Godziny pokazane w strefie',now:'teraz',pick:'Pokaż w mojej strefie czasowej',popular:'Popularne',all:'Wszystkie',yours:' (twoja)',
   exOwner:'To są przykładowe zmiany. Usuń je i wpisz swój prawdziwy grafik.',exClear:'Usuń przykłady',exView:'Grafik w przygotowaniu — wpisy poniżej są przykładowe.',
   prev:'Poprzedni tydzień',next:'Następny tydzień',free:'wolne',edit:'Edytuj',del:'Usuń',atAga:'u Agi',editAll:'Edytuj grafik',updated:'Ostatnia zmiana',
-  hEdit:'Zmień wpis',hAdd:'Dodaj wpis',date:'Data',from:'Od',to:'Do',kind:'Rodzaj',name:'Nazwa',rep:'Powtórz (tygodnie)',note:'Notatka (opcjonalnie)',
+  hEdit:'Zmień wpis',hAdd:'Dodaj wpis',date:'Data',from:'Od',to:'Do',kind:'Rodzaj',name:'Nazwa',nameEn:'Nazwa po angielsku (opcjonalnie)',rep:'Powtórz (tygodnie)',note:'Notatka (opcjonalnie)',
   saveOne:'Zapisz wpis',add:'Dodaj',cancel:'Anuluj',home:'Moja strefa (w niej wpisuję godziny)',publish:'Opublikuj zmiany',discard:'Odrzuć zmiany',done:'Zakończ edycję',
   unsaved:'Masz niezapisane zmiany.',saved:'Wszystko zapisane.',fill:'Uzupełnij datę i godziny.',publishing:'Publikuję…',published:'Opublikowane.',
   conflict:'Ktoś opublikował wersję w międzyczasie — strona się odświeży.',failA:'Nie udało się opublikować (',failB:'). Spróbuj za chwilę.',err:'błąd',langLbl:'Język',publish:'Zapisz grafik',copied:'Skopiowano. Wklej całość do pliku grafik.json na GitHubie i zapisz (Commit).',copyFail:'Nie udało się skopiować — zaznacz tekst poniżej ręcznie.',openGh:'Otwórz grafik.json na GitHubie ↗',editHint:'Po zapisie grafik zmieni się u wszystkich w ok. minutę.',loadFail:'Nie udało się wczytać grafiku.',pwTitle:'Edycja grafiku',pwLbl:'Hasło',pwBtn:'Odblokuj',pwRemember:'Zapamiętaj na tym urządzeniu',pwBad:'Złe hasło.',pwChecking:'Sprawdzam…',pwHelp:'Wpisz swoje hasło.',setupTitle:'Ustaw hasło',setupHelp:'Jednorazowo wklej token z GitHuba (github_pat_…) i wymyśl własne hasło. Potem logujesz się już tylko hasłem.',changeHelp:'Wymyśl nowe hasło.',tokLbl:'Token z GitHuba',newPw:'Nowe hasło (min. 8 znaków)',newPw2:'Powtórz hasło',setBtn:'Zapisz hasło',pwShort:'Hasło musi mieć min. 8 znaków.',pwMismatch:'Hasła się różnią.',tokBad:'Token nie działa albo nie ma dostępu do repozytorium.',pwSet:'Hasło zapisane.',forgot:'Nie pamiętam hasła',changePw:'Zmień hasło',noCrypto:'Ta przeglądarka nie obsługuje szyfrowania — otwórz stronę przez https.',logout:'Wyloguj',saving:'Zapisuję…',savedGh:'Zapisane. U wszystkich zaktualizuje się za ok. minutę.',saveFail:'Nie udało się zapisać (',editLink:'Edytuj (wymaga hasła)'},
@@ -119,7 +121,7 @@ var I18N = {
   shown:'Times shown in',now:'now',pick:'Show in my time zone',popular:'Popular',all:'All zones',yours:' (yours)',
   exOwner:'These are example shifts. Remove them and add your real schedule.',exClear:'Remove examples',exView:'Schedule in progress — the entries below are examples.',
   prev:'Previous week',next:'Next week',free:'free',edit:'Edit',del:'Delete',atAga:'for Aga',editAll:'Edit schedule',updated:'Last updated',
-  hEdit:'Edit entry',hAdd:'Add entry',date:'Date',from:'From',to:'To',kind:'Type',name:'Name',rep:'Repeat (weeks)',note:'Note (optional)',
+  hEdit:'Edit entry',hAdd:'Add entry',date:'Date',from:'From',to:'To',kind:'Type',name:'Name',nameEn:'English name (optional)',rep:'Repeat (weeks)',note:'Note (optional)',
   saveOne:'Save entry',add:'Add',cancel:'Cancel',home:'My time zone (I enter times in it)',publish:'Publish changes',discard:'Discard changes',done:'Finish editing',
   unsaved:'You have unsaved changes.',saved:'All saved.',fill:'Fill in the date and times.',publishing:'Publishing…',published:'Published.',
   conflict:'Someone published a newer version — the page will reload.',failA:'Could not publish (',failB:'). Try again in a moment.',err:'error',langLbl:'Language',publish:'Save schedule',copied:'Copied. Paste it into grafik.json on GitHub and commit.',copyFail:'Copy failed — select the text below manually.',openGh:'Open grafik.json on GitHub ↗',editHint:'After saving, everyone sees the change in about a minute.',loadFail:'Could not load the schedule.',pwTitle:'Edit schedule',pwLbl:'Password',pwBtn:'Unlock',pwRemember:'Remember on this device',pwBad:'Wrong password.',pwChecking:'Checking…',pwHelp:'Enter your password.',setupTitle:'Set a password',setupHelp:'Paste your GitHub token (github_pat_…) once and choose your own password. After that you only need the password.',changeHelp:'Choose a new password.',tokLbl:'GitHub token',newPw:'New password (min. 8 characters)',newPw2:'Repeat password',setBtn:'Save password',pwShort:'The password needs at least 8 characters.',pwMismatch:'Passwords do not match.',tokBad:'The token does not work or has no access to the repository.',pwSet:'Password saved.',forgot:'I forgot my password',changePw:'Change password',noCrypto:'This browser cannot encrypt — open the page over https.',logout:'Log out',saving:'Saving…',savedGh:'Saved. Everyone will see it in about a minute.',saveFail:'Could not save (',editLink:'Edit (password required)'}
@@ -154,6 +156,9 @@ function span(s,home){var a=wallToUtc(s.date,s.start,home),b=wallToUtc(s.date,s.
 var allZones = [];
 try{allZones = Intl.supportedValuesOf('timeZone')}catch(e){allZones = POPULAR.slice()}
 
+var EN_WORDS=[[/ćwiczenia/gi,'tutorial'],[/wykład/gi,'lecture'],[/lektorat/gi,'language class'],[/laboratorium|laborki/gi,'lab'],[/kolokwium/gi,'test'],[/egzamin/gi,'exam'],[/zajęcia/gi,'classes'],[/praca/gi,'work'],[/zmiana/gi,'shift'],[/wolne/gi,'day off']];
+function showTitle(s){var t=s.title||T('kinds')[s.kind];if(lang!=='en')return t;if(s.titleEn)return s.titleEn;EN_WORDS.forEach(function(p){t=t.replace(p[0],p[1])});return t}
+function ft(hm){if(lang!=='en')return hm;var p=hm.split(':'),h=+p[0];return ((h%12)||12)+':'+p[1]+'\u202f'+(h<12?'AM':'PM')}
 function render(){
   var data = editing ? draft : STATE, home = data.homeTz, now = Date.now();
   var today = keyIn(viewTz,now);
@@ -164,7 +169,7 @@ function render(){
   var differs = offset(viewTz,now)!==offset(home,now);
   var h = '';
   h += '<header class="top"><div class="hrow"><h1>'+(lang==='pl'?'Grafik <em>Agi</em>':'<em>Aga\'s</em> schedule')+'</h1><div class="lang" role="group" aria-label="'+T('langLbl')+'"><button data-lang="pl" aria-pressed="'+(lang==='pl')+'">PL</button><button data-lang="en" aria-pressed="'+(lang==='en')+'">EN</button></div></div>';
-  h += '<p class="sub">'+T('shown')+' <b>'+esc(tzName(viewTz))+'</b> ('+gmt(viewTz)+') · '+T('now')+' <span class="clock" id="clock">'+hmIn(viewTz,now)+'</span></p>';
+  h += '<p class="sub">'+T('shown')+' <b>'+esc(tzName(viewTz))+'</b> ('+gmt(viewTz)+') · '+T('now')+' <span class="clock" id="clock">'+ft(hmIn(viewTz,now))+'</span></p>';
   h += '<div class="tzrow"><label class="lbl" for="tz">'+T('pick')+'</label><select id="tz">';
   var seen = {}; h += '<optgroup label="'+T('popular')+'">';
   [browserTz].concat(POPULAR).forEach(function(z){if(seen[z]||!validTz(z))return;seen[z]=1;h+='<option value="'+z+'"'+(z===viewTz?' selected':'')+'>'+esc(tzName(z))+' — '+gmt(z)+(z===browserTz?T('yours'):'')+'</option>'});
@@ -184,9 +189,9 @@ function render(){
     items.forEach(function(it){
       var s = it.s, cls = s.kind==='uni'?' uni':s.kind==='other'?' other':'';
       var endDay = keyIn(viewTz,it.b)!==k ? ' (+1)' : '';
-      h += '<div class="shift'+cls+(now>=it.a&&now<it.b?' now':'')+'"><span class="time">'+hmIn(viewTz,it.a)+'–'+hmIn(viewTz,it.b)+endDay+'</span><span class="what">'+esc(s.title||T('kinds')[s.kind])+'</span>';
+      h += '<div class="shift'+cls+(now>=it.a&&now<it.b?' now':'')+'"><span class="time">'+ft(hmIn(viewTz,it.a))+'–'+ft(hmIn(viewTz,it.b))+endDay+'</span><span class="what">'+esc(showTitle(s))+'</span>';
       if(editing) h += '<span class="ed"><button data-edit="'+s.id+'">'+T('edit')+'</button><button data-del="'+s.id+'" aria-label="'+T('del')+'">✕</button></span>';
-      if(differs) h += '<span class="orig">'+T('atAga')+' ('+esc(tzName(home))+'): '+s.start+'–'+s.end+'</span>';
+      if(differs) h += '<span class="orig">'+T('atAga')+' ('+esc(tzName(home))+'): '+'<span class="nw">'+ft(s.start)+'–'+ft(s.end)+'</span>'+'</span>';
       if(s.note) h += '<span class="note">'+esc(s.note)+'</span>';
       h += '</div>';
     });
@@ -199,7 +204,7 @@ function render(){
   if(!gate) h += '<p class="foot"><a class="gh" href="#edytuj">'+T('editLink')+'</a></p>';
   if(canWrite && !editing) h += '<div class="row"><button class="primary" id="startEdit">'+T('editAll')+'</button></div>';
   if(editing) h += editorHtml();
-  if(STATE.updated) h += '<p class="foot">'+T('updated')+': '+new Date(STATE.updated).toLocaleString(T('loc'),{timeZone:viewTz,dateStyle:'medium',timeStyle:'short'})+'</p>';
+  if(STATE.updated) h += '<p class="foot">'+T('updated')+': '+new Date(STATE.updated).toLocaleString(T('loc'),{timeZone:viewTz,dateStyle:'medium',timeStyle:'short',hour12:lang==='en'})+'</p>';
   document.getElementById('app').innerHTML = h;
   bind();
 }
@@ -215,6 +220,7 @@ function editorHtml(){
   h += '<div class="field"><label class="lbl" for="fEnd">'+T('to')+'</label><input type="time" id="fEnd" value="'+(e?e.end:'21:00')+'"></div>';
   h += '<div class="field"><label class="lbl" for="fKind">'+T('kind')+'</label><select id="fKind">'+Object.keys(T('kinds')).map(function(k){return '<option value="'+k+'"'+(e&&e.kind===k?' selected':'')+'>'+T('kinds')[k]+'</option>'}).join('')+'</select></div>';
   h += '<div class="field"><label class="lbl" for="fTitle">'+T('name')+'</label><input id="fTitle" value="'+esc(e?e.title:'Rossmann')+'"></div>';
+  h += '<div class="field"><label class="lbl" for="fTitleEn">'+T('nameEn')+'</label><input id="fTitleEn" value="'+esc(e&&e.titleEn?e.titleEn:'')+'"></div>';
   if(!e) h += '<div class="field"><label class="lbl" for="fRep">'+T('rep')+'</label><input type="number" id="fRep" min="1" max="20" value="1"></div>';
   h += '</div><div class="field"><label class="lbl" for="fNote">'+T('note')+'</label><input id="fNote" value="'+esc(e?e.note:'')+'"></div>';
   h += '<div class="row"><button id="addBtn">'+(e?T('saveOne'):T('add'))+'</button>'+(e?'<button id="cancelEdit">'+T('cancel')+'</button>':'')+'</div>';
@@ -249,7 +255,7 @@ function bind(){
 function addShift(){
   var date=$('fDate').value,start=$('fStart').value,end=$('fEnd').value;
   if(!date||!start||!end){$('status').textContent=T('fill');return}
-  var base={start:start,end:end,kind:$('fKind').value,title:$('fTitle').value.trim(),note:$('fNote').value.trim()};
+  var base={start:start,end:end,kind:$('fKind').value,title:$('fTitle').value.trim(),titleEn:$('fTitleEn').value.trim(),note:$('fNote').value.trim()};
   if(editId){draft.shifts=draft.shifts.map(function(s){return s.id===editId?Object.assign({},s,base,{date:date}):s});editId=null}
   else{var n=Math.max(1,Math.min(20,+($('fRep').value)||1));for(var i=0;i<n;i++)draft.shifts.push(Object.assign({id:'s'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),date:addDays(date,i*7)},base))}
   draft.shifts.sort(function(a,b){return (a.date+a.start).localeCompare(b.date+b.start)});
@@ -317,7 +323,7 @@ function save(){
 function load(){fetch('grafik.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){STATE=d;if(!editing||!dirty)draft=JSON.parse(JSON.stringify(STATE));render()}).catch(function(){var a=$('app');if(a&&!STATE.shifts.length)a.insertAdjacentHTML('beforeend','<p class="foot">'+T('loadFail')+'</p>')})}
 function syncEdit(){gate=location.hash==='#edytuj'||location.hash==='#edit';if(gate&&keyBlob===undefined)loadKey();render()}
 window.addEventListener('hashchange',syncEdit);
-setInterval(function(){var c=$('clock');if(c)c.textContent=hmIn(viewTz,Date.now())},20000);
+setInterval(function(){var c=$('clock');if(c)c.textContent=ft(hmIn(viewTz,Date.now()))},20000);
 render();
 gate=location.hash==='#edytuj'||location.hash==='#edit';
 token=getTok();
