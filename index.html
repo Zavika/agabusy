@@ -97,6 +97,35 @@ button.primary{background:linear-gradient(120deg,var(--sun-a),var(--sun-b));bord
 .gh{color:var(--accent);font-weight:700;text-decoration:none}
 .gh:hover{text-decoration:underline}
 textarea{width:100%;min-height:160px;font-family:var(--f-mono);font-size:.8rem;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;box-sizing:border-box}
+@media (min-width:700px){
+  #app{max-width:760px}
+}
+@media (min-width:1180px){
+  #app{max-width:1280px;padding-inline:32px;padding-block:36px 56px;gap:22px}
+  .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);column-gap:32px;row-gap:10px;align-items:end;padding:34px 36px 30px;border-radius:26px}
+  .top .hrow{grid-column:1/-1}
+  .top .sub{grid-column:1;font-size:1rem}
+  .top .tzrow{grid-column:2;grid-row:2}
+  h1{font-size:3.6rem}
+  .weeknav{max-width:520px;width:100%;margin-inline:auto}
+  .days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-radius:22px}
+  .day{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:start;gap:12px;min-height:360px;padding:16px 12px;border-top:0;border-left:1px solid var(--line)}
+  .day:first-child{border-left:0}
+  .day.today{background:linear-gradient(180deg,var(--accent-soft),transparent 70%)}
+  .dname{flex-direction:row;align-items:baseline;gap:8px}
+  .dname b{font-size:1.9rem}
+  .free{align-self:start;padding-top:0}
+  .shift{padding:8px 10px;border-left-width:3px}
+  .what{font-size:.92rem;line-height:1.25;overflow-wrap:anywhere;hyphens:auto}
+  .time{white-space:normal;font-size:.8rem}
+  .orig{font-size:.68rem}
+  .ed{margin-left:0}
+  .panel{max-width:760px;width:100%;margin-inline:auto}
+  .banner{max-width:760px;width:100%;margin-inline:auto}
+}
+@media (min-width:1180px) and (max-width:1300px){
+  .orig{display:none}
+}
 </style>
 </head>
 <body>
