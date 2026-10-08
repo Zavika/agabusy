@@ -1,0 +1,43 @@
+{
+  "homeTz": "Europe/Warsaw",
+  "example": true,
+  "updated": null,
+  "shifts": [
+    {
+      "id": "e1",
+      "date": "2026-10-08",
+      "start": "15:00",
+      "end": "21:00",
+      "title": "Rossmann",
+      "kind": "work",
+      "note": ""
+    },
+    {
+      "id": "e2",
+      "date": "2026-10-09",
+      "start": "15:00",
+      "end": "21:00",
+      "title": "Rossmann",
+      "kind": "work",
+      "note": ""
+    },
+    {
+      "id": "e3",
+      "date": "2026-10-10",
+      "start": "08:00",
+      "end": "16:00",
+      "title": "Rossmann",
+      "kind": "work",
+      "note": ""
+    },
+    {
+      "id": "e4",
+      "date": "2026-10-12",
+      "start": "09:15",
+      "end": "14:30",
+      "title": "Zajęcia PJATK",
+      "kind": "uni",
+      "note": ""
+    }
+  ]
+}
