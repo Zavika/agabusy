@@ -1,7 +1,7 @@
 {
   "homeTz": "Europe/Warsaw",
   "example": false,
-  "updated": 1792658161155,
+  "updated": 1792658228501,
   "shifts": [
     {
       "id": "u1",
@@ -430,6 +430,26 @@
       "kind": "uni",
       "note": "",
       "titleEn": "History of Japanese Culture lecture"
+    },
+    {
+      "id": "smvjae9sygwv4",
+      "date": "2026-10-23",
+      "start": "12:30",
+      "end": "19:30",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
+    },
+    {
+      "id": "smvjaf74ybvch",
+      "date": "2026-10-24",
+      "start": "10:30",
+      "end": "18:00",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
     },
     {
       "id": "u37",
