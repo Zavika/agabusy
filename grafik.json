@@ -1,7 +1,7 @@
 {
   "homeTz": "Europe/Warsaw",
   "example": false,
-  "updated": 1793107982955,
+  "updated": 1793132547932,
   "shifts": [
     {
       "id": "u1",
@@ -560,6 +560,16 @@
       "kind": "uni",
       "note": "",
       "titleEn": "Java Programming Fundamentals tutorial"
+    },
+    {
+      "id": "smvr4ti7gqwix",
+      "date": "2026-10-29",
+      "start": "15:00",
+      "end": "21:30",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
     },
     {
       "id": "u47",
