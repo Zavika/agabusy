@@ -1,7 +1,7 @@
 {
   "homeTz": "Europe/Warsaw",
   "example": false,
-  "updated": 1793790267748,
+  "updated": 1793790317020,
   "shifts": [
     {
       "id": "u1",
@@ -756,6 +756,16 @@
       "date": "2026-11-06",
       "start": "15:00",
       "end": "20:30",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
+    },
+    {
+      "id": "smw20fs7e0zq7",
+      "date": "2026-11-07",
+      "start": "15:00",
+      "end": "20:00",
       "kind": "work",
       "title": "Rossmann",
       "titleEn": "",
