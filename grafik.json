@@ -1,7 +1,7 @@
 {
   "homeTz": "Europe/Warsaw",
   "example": false,
-  "updated": 1793132547932,
+  "updated": 1793790267748,
   "shifts": [
     {
       "id": "u1",
@@ -672,6 +672,16 @@
       "titleEn": "Java Programming Fundamentals lecture"
     },
     {
+      "id": "smw20d523n6n2",
+      "date": "2026-11-04",
+      "start": "14:00",
+      "end": "22:00",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
+    },
+    {
       "id": "u55",
       "date": "2026-11-04",
       "start": "15:45",
@@ -712,6 +722,16 @@
       "titleEn": "Java Programming Fundamentals tutorial"
     },
     {
+      "id": "smw20de3jcg8p",
+      "date": "2026-11-05",
+      "start": "16:00",
+      "end": "21:30",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
+    },
+    {
       "id": "u59",
       "date": "2026-11-06",
       "start": "08:30",
@@ -730,6 +750,16 @@
       "kind": "uni",
       "note": "",
       "titleEn": "History of Japanese Culture lecture"
+    },
+    {
+      "id": "smw20dv8506tt",
+      "date": "2026-11-06",
+      "start": "15:00",
+      "end": "20:30",
+      "kind": "work",
+      "title": "Rossmann",
+      "titleEn": "",
+      "note": ""
     },
     {
       "id": "u61",
